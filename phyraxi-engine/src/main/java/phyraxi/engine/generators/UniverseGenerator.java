@@ -43,7 +43,7 @@ public class UniverseGenerator {
 		for (Coordinates coordinates : coordinateList) {
 			Star star = starGenerator.generateStar(StarPopulation.DISC_POPULATION_I); // TODO: determine population
 			// TODO: determine binaries, companion stars and such...
-			StarSystem system = new StarSystem(star.getName(), coordinates, StarHierarchy.createSingleStar(star));
+			StarSystem system = new StarSystem(star.name(), coordinates, StarHierarchy.createSingleStar(star));
 			universe.add(system);
 		}
 		return universe;

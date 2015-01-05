@@ -56,7 +56,7 @@ public class PseudoRealitisticPlanetGenerator extends AbstractPlanetGenerator {
 	
 	int determineOrbit(int previousOrbit, Star star) {
 		if (previousOrbit == 0) {
-			return Math.round((random.nextInt(51) + 10) * (float) star.getMass());
+			return Math.round((random.nextInt(51) + 10) * star.mass().floatValue());
 		} else {
 			return previousOrbit + Math.round(previousOrbit * ((float) Math.pow(random.nextFloat(), 2) + 0.4f));
 		}
@@ -150,7 +150,7 @@ public class PseudoRealitisticPlanetGenerator extends AbstractPlanetGenerator {
 		static PlanetarySystemParameters getParametersFor(Star star) {
 			int count = 0;
 			int density = 0;
-			switch (star.getPopulation()) {
+			switch (star.population()) {
 			case CORE_POPULATION_I:
 				count = -10; density = 10; break;
 			case INTERMEDIATE_POPULATION_I:
@@ -162,7 +162,7 @@ public class PseudoRealitisticPlanetGenerator extends AbstractPlanetGenerator {
 			case HALO_POPULATION_II:
 				count = -4; density = -5; break;
 			}
-			switch (star.getSpectralType()) {
+			switch (star.spectralType()) {
 			case O:
 				count += -5; density += 3; break;
 			case B:

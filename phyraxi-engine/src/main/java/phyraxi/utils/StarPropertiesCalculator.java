@@ -65,16 +65,16 @@ public class StarPropertiesCalculator {
 	 * @return	flux density.
 	 */
 	public int calculateFluxDensity(Star star, int distance) {
-		return (int) Math.round(convertSolarLuminositiesToWatts(star.getBrightness())
+		return (int) Math.round(convertSolarLuminositiesToWatts(star.brightness())
 		/ geometricCalculator.calculateSphereArea(UnitConversions.centiAstronomicalUnitsToMeters(distance)));
 	}
 	
 	public int calculateInnerZoneBoundary(Star star) {
-		return (int) Math.round(star.getBrightness() * LIQUID_WATER_ZONE_INNER_LIMIT * 100);
+		return (int) Math.round(star.brightness() * LIQUID_WATER_ZONE_INNER_LIMIT * 100);
 	}
 	
 	public int calculateHabitableZoneBoundary(Star star) {
-		return (int) Math.round(star.getBrightness() * LIQUID_WATER_ZONE_OUTER_LIMIT * 100);
+		return (int) Math.round(star.brightness() * LIQUID_WATER_ZONE_OUTER_LIMIT * 100);
 	}
 
 }

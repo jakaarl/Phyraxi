@@ -38,11 +38,11 @@ public class StarMap {
 		public StarInfo(Star star, Coordinates coordinates) {
 			this.star = star;
 			this.coordinates = coordinates;
-			this.type = star.getSpectralType().toString() + star.getSpectralNumber() + star.getLuminosityClass();
+			this.type = star.spectralType().toString() + star.spectralNumber() + star.luminosityClass();
 		}
 
 		public String getName() {
-			return star.getName();
+			return star.name();
 		}
 
 		public String getType() {

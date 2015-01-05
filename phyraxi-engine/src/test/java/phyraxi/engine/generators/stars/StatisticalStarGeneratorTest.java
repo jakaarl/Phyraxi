@@ -38,9 +38,9 @@ public class StatisticalStarGeneratorTest {
 	public void testGenerator() {
 		for (int i = 0; i < 20; i++) {
 			Star star = generator.generateStar(StarPopulation.DISC_POPULATION_I);
-			System.out.println(String.valueOf(star.getSpectralType()) + star.getSpectralNumber() +
-					star.getLuminosityClass() +	" " + star.getMass() + "M(Sol); " + star.getBrightness() + "L(Sol); " +
-					star.getEffectiveTemperature() + "K");
+			System.out.println(String.valueOf(star.spectralType()) + star.spectralNumber() +
+					star.luminosityClass() +	" " + star.mass() + "M(Sol); " + star.brightness() + "L(Sol); " +
+					star.effectiveTemperature() + "K");
 		}
 	}
 
